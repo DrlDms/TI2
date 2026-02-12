@@ -1,17 +1,29 @@
-/* Darryl Adams
- * 1911838
- */
-
-
-
 #include <iostream>
-using namespace std;
-
-int main() {
-    cout << "Hello, greenhouse/climate monitor!\n";
-    // This is C++ code.
+int main(){
+    char input;
+    int i = 0;
+    for(bool x = true;x;i++) {
+        std::cout << "Still looping -- Press a to stop. Loop count: " << i << "\n";
+        std::cin >> input;
+        if (input == 'a') {
+            x = false;
+        }
+    }
+    std::cout << "stopped";
+    return 0;
 }
 
-// De semi-colon weghalen op lijn 11 geeft: error: expected ';' before '}' token
-// De accolade op lijn 13 weghalen geeft: error: expected '}' at end of input
-// int a = "number"; geeft error: invalid conversion from 'const char*' to 'int'
+
+
+
+
+
+
+// int number = 6; // number krijgt hier type int en waarde 6
+    // number = number + 1;
+    // number = number * 2;
+    // cout << "number: " << number << "\n";
+    // // number: 14
+    // int x = 8 - 4; // x krijgt hier type int en waarde 8-4
+    // cout << "x: " << x << "\n";
+    // // x: 4
