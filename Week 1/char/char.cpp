@@ -5,6 +5,7 @@
 
 
 #include <iostream>
+#include <string>
 
 // opdr 1.6
 void char_plus_int() {
@@ -20,11 +21,12 @@ void char_plus_int() {
 void leetspeak() {
     std::cout << "Geef een string om the vertalen:\n";
     std::string input;
-    std::cin >> input;
+    std::getline(std::cin, input);
     for (int i = 0; i < input.size(); i++) {
         switch (input[i]) {
             case 'e': 
                 input[i] = '3';
+                break;
             case 'l': 
                 input[i] = '1';
                 break;
@@ -34,6 +36,10 @@ void leetspeak() {
             case 'o': 
                 input[i] = '0';
                 break;
+            default:
+            if (input[i] > 96 && input[i] < 123) { // turns a-z -> A-Z
+                input[i] -= 32;
+            }
         }
     }
     std::cout << input;
@@ -45,7 +51,7 @@ void leetspeak() {
 
 
 int main() {
-    char_plus_int();
+    // char_plus_int();
     leetspeak();
 }
     
